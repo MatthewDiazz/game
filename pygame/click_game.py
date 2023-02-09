@@ -32,5 +32,5 @@ def on_mouse_down(pos, button):
 
 def on_mouse_down(pos):
     if character.collidepoint(pos):
-        sound.eep.play()
-        character.image = 'character_hurt'
+        sounds.eep.play()
+        character.image = 'clickgamecharacter'
