@@ -5,7 +5,7 @@ game_over = False
 character = Actor("character")
 character.pos = 100, 100
 
-coin- Actor("coin")
+coin= Actor("coin")
 coin.pos = 200, 200
 
 def draw():
@@ -27,5 +27,18 @@ def time_up():
 clock.schedule(time_up, 7.0)
 
 def update():
+    global score
+
     if keyboard.left:
-        character.x = character
+        character.x = character.x - 2
+    elif keyboard.right:
+        character.x = character.x + 2
+    elif keyboard.up:
+        character.y = character.y - 2
+    elif keyboard.down:
+        charcter.y = character.y + 2
+
+    coin_collected = character.colliderect(coin)
+
+    if coin_collected:
+        score =
